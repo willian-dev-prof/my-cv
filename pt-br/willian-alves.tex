@@ -1,0 +1,218 @@
+\documentclass[a4paper,12pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage{fullpage}			%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage[a4paper, total={7.4in, 10in}]{geometry}
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{fontawesome}                %icons
+
+\usepackage{multirow}
+
+\usepackage{paralist} % for horizontal bullet points
+\usepackage[inline]{enumitem} % load package
+
+\usepackage{longtable} % for the work experience section allowing page breaks
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.7}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.ttf,
+BoldFont = Fontin-Bold.ttf,
+ItalicFont = Fontin-Italic.ttf
+]
+{Fontin-Regular.ttf}
+%%%
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+\addtolength{\voffset}{1cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\font\fb=''[cmr10]''
+
+\par{
+    \centering{\LARGE Willian \textsc{Alves}}\\
+    \textcolor{white}{\tiny\textbf{Resumo}}\\
+    \centering{\normalsize Tech Lead Cloud e Arquiteto de Soluções Cloud especializado em AWS com paixão por construir sistemas altamente escaláveis e de fácil manutenção. Mais de 9 anos de experiência em soluções cloud, incluindo colaboração com equipes internacionais para entregar soluções robustas.}
+
+\par}
+
+
+\noindent\makebox[\textwidth]{
+\begin{tabular}{rlrl}
+\textsc{Email:}     & willian.dev.prof@outlook.com
+    & \textsc{Links:} & \href{https://www.linkedin.com/in/willian-alves-2ab3a6119/}{\faLinkedinSquare\ LinkedIn} \\
+\textsc{Localização:} & Recife/PE, Brasil.
+    & \textsc{Telefone:}     & \href{https://api.whatsapp.com/send?phone=5581979126253}{\faWhatsapp\ +55~81~97912~6253}\\
+\end{tabular}
+}
+
+
+
+\section{Habilidades Técnicas}
+\vspace{2pt}
+\begin{tabular}{rp{15.2cm}}
+\raggedleft Programação:
+& \begin{itemize*}[label=\Large\textbullet] 
+    \item Golang
+    \item Java
+    \item Python
+    \item Desenvolvimento de APIs RESTful
+\end{itemize*}\\
+\raggedleft Devops:
+& \begin{itemize*}[label=\Large\textbullet]
+    \item Cloudformation
+    \item Terraform
+    \item Linux
+    \item Git
+    \item CI/CD
+\end{itemize*}\\
+\raggedleft Cloud:
+& \begin{itemize*}[label=\Large\textbullet]
+    \item AWS
+    \item Azure
+\end{itemize*}\\
+\raggedleft Bancos de Dados:
+& \begin{itemize*}[label=\Large\textbullet]
+    \item PostgreSQL
+    \item MySQL
+    \item Dynamo
+    \item RDS
+\end{itemize*}\\
+\raggedleft Outros Serviços:
+& \begin{itemize*}[label=\Large\textbullet]
+    \item Athena
+    \item Lambda
+    \item ECS
+    \item EC2
+    \item SQS
+    \item IOT
+\end{itemize*}\\
+\raggedleft Processos:
+& \begin{itemize*}[label=\Large\textbullet]
+    \item Metodologias ágeis, principalmente Scrum e Kanban
+\end{itemize*}\\
+\raggedleft Idiomas:
+& \begin{itemize*}[label=\Large\textbullet]
+    \item Inglês (B2 Intermediário-Avançado)
+    \item Espanhol (B2 Intermediário-Avançado)
+    \item Português Brasileiro Nativo
+\end{itemize*}\\
+\end{tabular}
+
+\section{Experiência Profissional}
+% \begin{tabular}{r|p{11cm}}
+\begin{longtable}{r|p{14.3cm}}
+
+\multirow{2}{*}{
+\shortstack[r]{
+\textsc{Tech Lead Cloud \&}\\
+\textsc{Arquiteto Cloud}\\
+07/2024 -- Atual
+}}
+& \large{Stoneridge} \\*
+&\small{
+\begin{itemize*}[label=\Large\textbullet]
+    \item Liderei o desenvolvimento de um sistema de gerenciamento de frotas baseado em nuvem na AWS, atendendo clientes em toda a América do Norte, reduzi os custos de infraestrutura em 70\% através do uso otimizado de AWS Lambda, ECS, DynamoDB, Aurora RDS, S3, Cognito, Athena e SQS, melhorei a confiabilidade do sistema em 80\% implementando monitoramento e alertas automatizados usando CloudWatch, Athena e Grafana, reduzindo 60\% dos custos.
+    \end{itemize*}
+}
+\\\multicolumn{2}{c}{} \\
+
+\multirow{2}{*}{
+\shortstack[r]{
+\textsc{Tech Lead Cloud \&}\\
+\textsc{Arquiteto Cloud}\\
+10/2022 -- 07/2024
+}}
+ & \large{V3 Technology} \\*
+ &\small{
+    \begin{itemize*}[label=\Large\textbullet]
+        \item Fui responsável por desenvolver do zero um sistema de segurança para veículos, incluindo caminhões e carros, para analisar o comportamento do motorista, prevenir acidentes e gerar relatórios. Além disso, otimizei os custos da AWS para \$0,37 por dispositivo, alcançando uma redução de 88\% em comparação com a média do mercado.
+     \end{itemize*}
+ }
+ \\\multicolumn{2}{c}{} \\
+
+
+\multirow{2}{*}{
+\shortstack[r]{
+\textsc{Engenheiro de Software}\\
+06/2021 -- 10/2022
+}}
+ & \large{Samsung (UFPE)} \\*
+ &\small{
+    \begin{itemize*}[label=\Large\textbullet]
+        \item Fui responsável por desenvolver do zero um sistema para otimizar o tempo de processamento de peças de máquinas para computadores e dispositivos móveis usando Visão Computacional. O projeto seguiu as melhores práticas em segurança e qualidade de código, garantindo eficiência, confiabilidade e escalabilidade.
+     \end{itemize*}
+}
+ \\\multicolumn{2}{c}{} \\
+
+ \multirow{3}{*}{
+\shortstack[r]{
+\textsc{Engenheiro de Software}\\
+06/2021 -- 09/2023
+}}
+ & \large{Sulwork} \\*
+ &\small{
+    \begin{itemize*}[label=\Large\textbullet]
+        \item Desenvolvi aplicações adaptadas às necessidades específicas do setor de saúde, demonstrei proficiência em uma ampla gama de tecnologias, incluindo FLEX, PL/SQL Oracle, JAVA, ActionScript, TypeScript, HTML5, CSS3, Hibernate e JPA, criei relatórios detalhados e visualizações de dados usando IReport (Jasper), gerenciei controle de versão usando GIT para colaboração efetiva de código, utilizei JIRA da Atlassian para gerenciamento de projetos e rastreamento de problemas.
+    \end{itemize*}
+}
+ \\\multicolumn{2}{c}{} \\
+
+\multirow{3}{*}{
+\shortstack[r]{
+\textsc{Engenheiro de Software}\\
+12/2017 -- 06/2021
+}}
+ & \large{MV System} \\*
+ &\small{
+    \begin{itemize*}[label=\Large\textbullet]
+        \item Desempenhei um papel fundamental na migração de todo o sistema da empresa de Flex e Java 6 para Java 11 com Spring Boot e Angular. Além disso, otimizei os custos de servidor em 38\% através de refatoração de código, removendo processos e recursos desnecessários, e migrando partes do sistema para um ambiente AWS privado.
+     \end{itemize*}
+ }
+ \\\multicolumn{2}{c}{} \\
+\end{longtable}
+%Section: Education
+\section{Formação Acadêmica}
+\vspace{6pt}
+\begin{tabular}{rl}
+
+\rule{2cm}{0pt} 2025 & \textsc{AWS CERTIFIED CLOUD PRACTITIONER} \\ &\normalsize\textbf{Amazon Web Service (AWS)}\\&\\
+2019 & \textsc{TECNÓLOGO EM SISTEMAS PARA INTERNET} \\ &\normalsize\textbf{Unisãomiguel – Pernambuco}\\&\\
+\end{tabular}
+
+\end{document}
